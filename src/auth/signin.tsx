@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 
 
-const Signin = ({ type }: { type: "signup" | "signin" }) => {
+const Signin = ({  }: { type: "signup" | "signin" }) => {
   const [postInput, setPostInput] = useState({
     email: "",
     password: "",

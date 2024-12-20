@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const Signup = ({ type }: { type: "signup" | "signin" }) => {
+const Signup = ({  }: { type: "signup" | "signin" }) => {
   const [postInput, setPostInput] = useState<SignupInput>({
     name: "",
     email: "",

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Appbar from './appbar';
+
 import { Link } from 'react-router-dom';
 
 interface blogCardProps {

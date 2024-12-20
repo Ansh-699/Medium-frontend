@@ -1,5 +1,4 @@
-import React from 'react'
-import { Avatar } from './blogCard'
+
 import { Link } from 'react-router-dom'
 
 const appbar = () => {

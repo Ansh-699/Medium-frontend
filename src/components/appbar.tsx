@@ -1,8 +1,10 @@
 
 import { Link } from 'react-router-dom'
+// import Author from '../hooks/index';
+
 
 const appbar = () => {
-  const author = 'John Doe'; // Define the author variable
+  const author = 'John Doe'; 
 
   return (
     <div className='border-b border-slate-200 bg-slate-100 flex justify-between px-10 py-4'>

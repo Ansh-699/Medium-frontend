@@ -54,7 +54,7 @@ const BlogCard: React.FC<blogCardProps> = ({
                     )}
                 </div>
                 <div className='w-full text-slate-500 mt-2'>
-                    {`${Math.ceil(content.length / 100)} min ago`}
+                    {getTimeDifference(date)}
                 </div>
             </div>
         </div>
@@ -76,6 +76,23 @@ function Circle() {
     return (
         <div className='h-1 w-1 rounded-full bg-gray-500'></div>
     );
+}
+
+function getTimeDifference(date: string) {
+    const postDate = new Date(date);
+    const currentDate = new Date();
+    const diffInMs = currentDate.getTime() - postDate.getTime();
+    const diffInMinutes = Math.floor(diffInMs / 60000);
+    const diffInHours = Math.floor(diffInMinutes / 60);
+    const diffInDays = Math.floor(diffInHours / 24);
+
+    if (diffInMinutes < 60) {
+        return `${diffInMinutes} min ago`;
+    } else if (diffInHours < 24) {
+        return `${diffInHours} hours ago`;
+    } else {
+        return `${diffInDays} days ago`;
+    }
 }
 
 export default BlogCard;
